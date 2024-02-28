@@ -1,0 +1,21 @@
+{
+	"name": "unused-resources",
+	"version": "0.1.0",
+	"files": [
+		"src/",
+		"README.md"
+	],
+	"bin": {
+		"unused-messages": "src/unused-messages.js",
+		"unused-css": "src/unused-css.js"
+	},
+	"devDependencies": {
+		"eslint-config-wikimedia": "^0.26.0"
+	},
+	"dependencies": {
+		"chalk": "^4.1.2",
+		"glob": "^10.3.10",
+		"less": "^4.2.0",
+		"minimist": "^1.2.8"
+	}
+}
