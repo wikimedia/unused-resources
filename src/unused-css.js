@@ -84,7 +84,6 @@ const allClassNames = new Set();
 
 		if ( path.extname( styleFile ) === '.less' ) {
 			classNames = await processLessContent( styleContent, styleFile );
-			console.log( styleFile );
 		} else {
 			classNames = extractClassNames( styleContent );
 		}
