@@ -91,6 +91,13 @@ const generatedMessages = [];
 				}
 			);
 		}
+		if ( extension.TrackingCategories ) {
+			extension.TrackingCategories.forEach(
+				( category ) => {
+					generatedMessages.push( category + '-desc' );
+				}
+			);
+		}
 		if ( extension.LogTypes ) {
 			extension.LogTypes.forEach(
 				( type ) => {
