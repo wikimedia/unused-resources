@@ -17,6 +17,8 @@ if ( !fs.existsSync( extensionPath ) ) {
 const extension = require( extensionPath );
 const modules = extension.ResourceModules || extension.ResourceLoaderModules || {};
 
+const base = extension.ResourceFileModulePaths ? extension.ResourceFileModulePaths.localBasePath : '';
+
 function getMessagesUsedInScript( scriptPath, messageKeys ) {
 	if ( !fs.existsSync( scriptPath ) ) {
 		return [];
@@ -50,7 +52,7 @@ Object.entries( modules ).forEach( ( [ moduleName, moduleDef ] ) => {
 
 	scripts.forEach( ( script ) => {
 		// Try to resolve script path
-		let scriptPath = path.join( repoRoot, script );
+		let scriptPath = path.join( repoRoot, base, script );
 		if ( !fs.existsSync( scriptPath ) ) {
 			// Try glob if not found
 			const matches = glob.sync( script, { cwd: repoRoot } );
