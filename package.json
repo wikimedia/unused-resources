@@ -10,6 +10,7 @@
 	],
 	"bin": {
 		"unused-messages": "src/unused-messages.js",
+		"unloaded-messages": "src/unloaded-messages.js",
 		"unused-css": "src/unused-css.js"
 	},
 	"devDependencies": {
